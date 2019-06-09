@@ -1,0 +1,103 @@
+html,body{
+    height: 100%;
+    width: 100%;
+}
+body{
+    background: radial-gradient(circle,rgb(246, 246, 248),rgb(212, 250, 168),#4275d3,#345d75,#102a3f);
+    margin: 0;
+}
+.view{
+    perspective: 2000px;
+    padding-top: 250px;
+    box-sizing: border-box;
+}
+.cube{
+    height: 350px;
+    width: 350px;
+    margin: 0 auto;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: spin 10s infinite linear;
+}
+@-webkit-keyframes spin {
+    0%{transform: rotateX(0deg) rotateY(0deg);}
+    25%{transform:  rotateX(90deg) rotateY(90deg);}
+    50%{transform:  rotateX(180deg) rotateY(180deg);}
+    75%{transform:  rotateX(270deg) rotateY(270deg);}
+    100%{transform: rotateX(360deg) rotateY(360deg);}
+}
+.cube > div{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: radial-gradient(circle,rgb(250, 250, 250),rgb(101, 141, 173),rgb(28, 166, 201));
+    /* color: rgb(47, 18, 153);
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    line-height: 300px; */
+    opacity: 0.5;
+}
+.cube > span{
+    position: absolute;
+    top: 122.5px;
+    left: 122.5px;
+    display: block;
+    height: 105px;
+    width: 105px;
+    background: radial-gradient(circle,rgb(255, 255, 255),rgb(224, 224, 224),rgb(206, 206, 206),rgb(189, 189, 189),rgb(116, 116, 116));
+}
+.one{
+    transform: translateZ(175px);
+}
+.two{
+    transform: translateZ(-175px) rotateY(180deg);
+}
+.three{
+    transform: translateX(175px) rotateY(90deg);
+}
+.four{
+    transform: translateX(-175px) rotateY(270deg);
+}
+.five{
+    transform: translateY(-175px) rotateX(90deg);
+}
+.six{
+    transform: translateY(175px) rotateX(270deg);
+}
+.front{
+    transform: translateZ(52.5px);
+}
+.behind{
+    transform: translateZ(-52.5px) rotateY(180deg);
+}
+.left{
+    transform: translateX(52.5px) rotateY(90deg);
+}
+.right{
+    transform: translateY(-52.5px) rotateX(90deg);
+}
+.top{
+    transform: translateY(-52.5px) rotateX(90deg);
+}
+.bottom{
+    transform: translateY(52.5px) rotateX(270deg);
+}
+.cube:hover .one{
+    transform: translateZ(350px);
+}
+.cube:hover .two{
+    transform: translateZ(-350px) rotateY(180deg);
+}
+.cube:hover .three{
+    transform: translateX(350px) rotateY(90deg);
+}
+.cube:hover .four{
+    transform: translateX(-350px) rotateY(270deg);
+}
+.cube:hover .five{
+    transform: translateY(-350px) rotateX(90deg);
+}
+.cube:hover .six{
+    transform: translateY(350px) rotateX(270deg);
+}
